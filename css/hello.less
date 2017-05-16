@@ -1,0 +1,37 @@
+.hello {
+	position: absolute;
+	height: 72px;
+	width: 50px;
+	top: 50%;
+	left: 50%;
+	margin-left: -25px;
+	margin-top: -36px;
+	background-image: url(../img/hello.png);
+	animation: play .8s steps(10) infinite;
+	border: 1px solid #666;
+
+	@keyframes play {
+	   from { background-position:    0px 0px; }
+	     to { background-position: -500px 0px; }
+	}
+
+	@-webkit-keyframes play {
+	   from { background-position:    0px; }
+	     to { background-position: -500px; }
+	}
+
+	@-moz-keyframes play {
+	   from { background-position:    0px; }
+	     to { background-position: -500px; }
+	}
+
+	@-ms-keyframes play {
+	   from { background-position:    0px; }
+	     to { background-position: -500px; }
+	}
+
+	@-o-keyframes play {
+	   from { background-position:    0px; }
+	     to { background-position: -500px; }
+	}
+}

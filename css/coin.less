@@ -1,0 +1,38 @@
+.coin {
+  position: absolute;
+  height: 100px;
+  width: 80px;
+  top: 50%;
+  left: 50%;
+  margin-left: -40px;
+  margin-top: -40px;
+  background-image: url(../img/coin.png);
+  background-repeat: no-repeat;
+  animation: coin .8s steps(8) infinite;
+  border: 1px solid #666;
+
+  @keyframes coin {
+     from { background-position:    0px;}
+       to { background-position: -640px;}
+  }
+
+  @-webkit-keyframes coin {
+   from { background-position:    0px;}
+       to { background-position: -640px;}
+  }
+
+  @-moz-keyframes coin {
+    from { background-position:    0px;}
+       to { background-position: -640px;}
+  }
+
+  @-ms-keyframes coin {
+    from { background-position:    0px;}
+       to { background-position: -640px;}
+  }
+
+  @-o-keyframes coin {
+    from { background-position:    0px;}
+       to { background-position: -640px;}
+  }
+}

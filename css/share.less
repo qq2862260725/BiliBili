@@ -1,0 +1,19 @@
+.share {
+	position: absolute;
+	height: 80px;
+	width: 80px;
+	top: 50%;
+	left: 50%;
+	margin-top: -40px;
+	margin-left: -40px;
+	background-image: url(../img/bili/share.png);
+	border: 1px solid #333;
+
+	&:hover {
+		animation: share 2s steps(17) infinite;
+	}
+	@keyframes share {
+		from { background-position:    0px 0px; }
+	     to { background-position: -1360px 0px; }
+	}
+}

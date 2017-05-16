@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Acfun</title>
+	<link rel="stylesheet" type="text/css" href="css/base.css">
+	<link rel="stylesheet" type="text/css" href="css/index.less">
+</head>
+<body onload="computed()">
+	<div class="gif">
+		<img v-bind:src=random v-on:click='add'>
+		<div class="sum">
+			<p>{{counter}}</p>
+		</div>
+	</div>
+</body>
+<script src="bower_components/vue/dist/vue.js"></script>
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script>
+	var app = new Vue({
+		el: '.gif',
+		data: {
+			counter: 0,
+			random: 'img/acfun/1.png',
+			src: '',
+		},
+		methods: {
+			add: function() {
+				this.counter = this.counter + 1;
+				a = Math.ceil(Math.random()*54);
+				console.log(a);
+				this.random = 'img/acfun/' + a + '.png';
+				return this.random;
+			}
+		},
+	})
+
+
+
+	$('img').click(function() {
+		$('.sum').show();
+		$('.gif').append('<div class="click">' +
+			'<p>+1 Click</p>' +
+		'</div>');
+		$('.click').animate({
+			"top": '-60px',
+		}).fadeOut(500);
+	})
+	function computed() {
+		b = Math.ceil(Math.random()*54);
+		$('img').attr("src",'img/acfun/' + b + '.png');
+	}
+</script>
+</html>
